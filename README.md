@@ -16,5 +16,8 @@ npm run dev
 # or
 yarn dev
 ```
-
 port:4000
+
+## build
+yarn build,yarn start
+Basically, using vercel
