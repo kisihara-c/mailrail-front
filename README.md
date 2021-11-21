@@ -18,6 +18,9 @@ yarn dev
 ```
 port:4000
 
+## env
+NEXT_PUBLIC_ENDPOINTROOT
+
 ## build
 yarn build,yarn start
 Basically, using vercel
