@@ -36,12 +36,12 @@ export default function Home() {
   const saHoChange = (event) => setSendingAtHo(event.target.value);
   const saMiChange = (event) => setSendingAtMi(event.target.value);
 
-  const [numForRandomText,setNumForRandomText] = useState(999);
+  //const [numForRandomText,setNumForRandomText] = useState(999);
 
   const randomText = ()=>{
     const t = ["ソシャゲをやる","買い物に行く","イベントがある"];
-    if(numForRandomText==999){setNumForRandomText(Math.floor(Math.random()*t.length))}
-    return "sending str ※平文で保存されます example:" + t[numForRandomText];
+    // if(numForRandomText==999){setNumForRandomText(Math.floor(Math.random()*t.length))}
+    return "sending str ※平文で保存されます example:" + t[0];
   }
 
   const onSent = ()=>{
@@ -106,7 +106,7 @@ export default function Home() {
   
           <Center>
             <Box w="400px" h="40%" mb="10px">          
-              <Box color="red.400" mt="10px" mb="10px"><h1>メールを予約しました！</h1></Box>
+              <Box color="red.400" mt="10px" mb="10px"><h1>{res.r ? res.r :"メールを予約しました！"}</h1></Box>
               宛先 : {destAddress}<br />
               内容 : {remindStr}<br />
               {sendingAtYe}年{sendingAtMo}月{sendingAtDa}日 {sendingAtHo}時{sendingAtMi}分
